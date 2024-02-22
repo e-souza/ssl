@@ -2,11 +2,11 @@
 ```
 easyrsa init-pki
 easyrsa --batch build-ca nopass
-easyrsa --batch --req-cn=example.org gen-req example.org nopass
-easyrsa --batch --subject-alt-name='DNS:example.org,DNS:www.example.org'  \
-    sign-req server example.org
+easyrsa --batch --req-cn=domain.com gen-req domain.com nopass
+easyrsa --batch --subject-alt-name='DNS:domain.com,DNS:www.domain.com'  \
+    sign-req server domain.com
 ```
 or
 ```
-./easyrsa --subject-alt-name="DNS:www.example.net,DNS:secure.example.net" build-server-full  alttest nopass
+./easyrsa --subject-alt-name="DNS:www.domain.com,DNS:secure.domain.com" build-server-full  alttest nopass
 ```
